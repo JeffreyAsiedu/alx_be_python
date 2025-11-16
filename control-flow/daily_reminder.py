@@ -1,20 +1,6 @@
-while True:
-    task = input("Enter your task: ").strip()
-    if task:
-        break
-    print("Task cannot be empty. Please enter a valid task.")
-
-while True:
-    priority = input("Priority (high/medium/low): ").lower().strip()
-    if priority in ("high", "medium", "low"):
-        break
-    print("Invalid priority. Please enter high, medium, or low.")
-
-while True:
-    time_bound = input("Is it time-bound? (yes/no): ").lower().strip()
-    if time_bound in ("yes", "no"):
-        break
-    print("Please answer yes or no.")
+task = input("Enter your task: ").strip()
+priority = input("Priority (high/medium/low): ").lower().strip()
+time_bound = input("Is it time-bound? (yes/no): ").lower().strip()
 
 match priority:
     case "high":
@@ -29,6 +15,6 @@ match priority:
 if time_bound == "yes":
     message += " that requires immediate attention today!"
 else:
-    message = "Note: " + message + ". Consider completing it when you have free time."
+    message += ". Consider completing it when you have free time."
 
-print("\nReminder:", message)
+print("Reminder:", message)
