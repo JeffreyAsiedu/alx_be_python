@@ -13,7 +13,11 @@ match priority:
         message = f"'{task}' has an unknown priority level"
 
 if time_bound == "yes":
-    message += " that requires immediate attention today!"
+    message += " that requires immediate attention today! 🔔"
+    customized_reminder = f"Don't forget! Completing '{task}' first will make your day smoother."
 else:
     message = "Note: " + message + ". Consider completing it when you have free time."
+    customized_reminder = f"Maybe schedule some relaxed time to finish '{task}' when convenient."
+
 print("\nReminder:", message)
+print(customized_reminder)
