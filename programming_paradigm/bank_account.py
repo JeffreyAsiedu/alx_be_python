@@ -1,6 +1,6 @@
 class BankAccount:
-    def display_balance(self):
-    print(f"Current Balance: ${self.__account_balance:.2f}")
+    def __init__(self, initial_balance=0.0):
+        self.__account_balance = initial_balance
 
     def deposit(self, amount):
         if amount > 0:
@@ -12,6 +12,6 @@ class BankAccount:
             return True
         return False
 
-    def display_balance(self):
-        print(f"Current Balance: ${self.__account_balance}")
+   def display_balance(self):
+    print(f"Current Balance: ${self.__account_balance:.2f}")
       
