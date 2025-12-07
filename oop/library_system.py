@@ -38,8 +38,6 @@ class Library:
                 print(f"Book: {book.title} by {book.author}")
 
 
-from library_system import Book, EBook, PrintBook, Library
-
 def main():
     # Create a Library instance
     my_library = Library()
