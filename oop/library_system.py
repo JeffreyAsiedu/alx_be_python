@@ -3,6 +3,9 @@ class Book:
         self.title = title
         self.author = author
 
+    def __str__(self):
+        return f"Book: {self.title} by {self.author}"
+
 
 class EBook(Book):
     def __init__(self, title, author, file_size):
@@ -31,11 +34,7 @@ class Library:
 
     def list_books(self):
         for book in self.books:
-            # If book has a custom __str__, it will be used automatically
-            if hasattr(book, "__str__"):
-                print(book)
-            else:
-                print(f"Book: {book.title} by {book.author}")
+            print(book)
 
 
 def main():
@@ -54,6 +53,7 @@ def main():
 
     # List all books in the library
     my_library.list_books()
+
 
 if __name__ == "__main__":
     main()
